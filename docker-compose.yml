@@ -1,0 +1,35 @@
+version: '3.6'
+
+services:
+
+  # The Database.
+  db:
+    image: mariadb:10.4
+    environment:
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_ROOT_PASSWORD: root
+    restart: unless-stopped
+    volumes:
+      - data_db:/var/lib/mysql
+
+  # The Web Server.
+  wordpress:
+    image: 'wordpress:latest'
+    depends_on:
+      - db
+    ports:
+      - '8888:80'
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: 'db:3306'
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+    volumes:
+      - './plugins:/var/www/html/wp-content/plugins'
+      - './themes:/var/www/html/wp-content/themes'
+      - './uploads:/var/www/html/wp-content/uploads'
+
+volumes:
+  data_db: null
