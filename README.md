@@ -32,14 +32,15 @@ db:
 
 Once the project up and running via Docker, you may need to install WordPress and enable your theme.
 
-## 🎨 Build the theme
+## 🎨 Build your own theme
 
-Your own theme must be in the `./themes` directory.
+Your own theme can be bootstrapped by coping `skeleton` and enabling your theme.
 
 ```bash
-cp ./themes/example ./themes/your-theme-name
+cp -r ./themes/skeleton ./themes/your-theme-name
 ```
 
+Don't forget to rename your theme in the `style.css` file.
 ## 🧪 Experiment with the Webmardi example
 
 You may want to experiment how custom post type are created and used in a Theme by using the Webmardi example.
