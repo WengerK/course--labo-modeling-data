@@ -41,6 +41,7 @@ cp -r ./themes/skeleton ./themes/your-theme-name
 ```
 
 Don't forget to rename your theme in the `style.css` file.
+
 ## 🧪 Experiment with the Webmardi example
 
 You may want to experiment how custom post type are created and used in a Theme by using the Webmardi example.
