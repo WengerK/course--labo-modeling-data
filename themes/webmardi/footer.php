@@ -5,16 +5,36 @@
  * Contains the closing of the #content div and all content after.
  */
 ?>
-        <footer class="flex-none py-16">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-between md:flex-row">
-                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 183 48" class="h-12 w-auto text-slate-900" width="207" height="33" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.624 10.258L8.256 27.56h.537l3.48-17.302h7.766L23.52 27.56h.534l2.635-17.302h5.622L27.94 32.376h-8.034l-3.48-17.303h-.537l-3.48 17.303H4.373L0 10.258h5.624zM49.851 19.043c-.402-2.81-2.188-4.593-5.088-4.593-3.17 0-4.821 1.873-5.267 4.593H49.85zm-5.043-9.41c6.425 0 10.755 4.505 10.755 11.149v2.185H39.452c.223 2.943 2.32 5.217 5.534 5.217 3.124 0 4.775-1.739 5.534-3.3l4.597 2.676C53.599 29.879 51.01 33 45.074 33c-6.605 0-11.38-4.994-11.38-11.861 0-6.689 4.597-11.506 11.114-11.506zM64.666 21.317c0 4.192 2.588 6.689 6.07 6.689 3.392 0 6.07-2.408 6.07-6.689 0-4.28-2.678-6.688-6.07-6.688-3.482 0-6.07 2.497-6.07 6.688zm0-20.156V13.38h.537c1.158-1.873 3.123-3.747 7.05-3.747 5.534 0 10.176 4.906 10.176 11.684 0 6.779-4.642 11.684-10.175 11.684-3.928 0-5.893-1.873-7.052-3.746h-.626v3.122h-5.533V1.16h5.623z" fill="#4040B8"/><path fill-rule="evenodd" clip-rule="evenodd" d="M110.5 32.376l-2.634-17.302h-.535l-3.481 17.302h-7.765l-3.482-17.302h-.536l-2.633 17.302h-5.623l4.374-22.119h8.033l3.48 17.303h.536l3.481-17.303h8.034l4.374 22.12H110.5zM127.629 28.363c3.927 0 6.115-2.32 6.115-5.351v-.357l-6.785.803c-2.098.267-3.124 1.025-3.124 2.318 0 1.516 1.295 2.587 3.794 2.587zm1.786-18.73c6.025 0 9.952 3.434 9.952 8.607v14.136h-5.535v-3.122h-.624c-.715 1.472-2.277 3.747-6.962 3.747-4.999 0-8.302-2.676-8.302-6.912 0-3.523 3.08-5.976 7.321-6.422l8.479-.936v-.535c0-2.096-1.608-3.747-4.642-3.747-2.945 0-4.775 1.517-6.159 3.836l-4.553-2.944c2.634-3.3 5.624-5.707 11.025-5.707zM149.631 13.469h.624c.848-2.453 2.723-3.3 5.535-3.3h2.142v5.083h-3.303c-2.857 0-4.909 1.516-4.909 4.638v12.486h-5.624V10.257h5.535v3.212zM164.402 21.317c0 4.28 2.678 6.689 6.07 6.689 3.481 0 6.07-2.497 6.07-6.689 0-4.191-2.589-6.688-6.07-6.688-3.392 0-6.07 2.407-6.07 6.688zm17.763 11.06h-5.534v-3.122h-.625c-1.161 1.873-3.125 3.746-7.051 3.746-5.536 0-10.177-4.905-10.177-11.684 0-6.778 4.641-11.684 10.177-11.684 3.926 0 5.89 1.874 7.051 3.747h.536V1.16h5.623v31.216zM187.16 32.377h5.624v-22.12h-5.624v22.12zM189.973 0c2.231 0 3.972 1.56 3.972 3.836 0 2.274-1.741 3.834-3.972 3.834-2.232 0-3.972-1.56-3.972-3.834 0-2.275 1.74-3.836 3.972-3.836zM200.951 1.254v.557h-1.741v4.646h-.61V1.81h-1.734v-.557h4.085zM202.776 1.254l1.509 4.549h.09l1.516-4.55H207v5.204h-.61V1.923h-.089l-1.51 4.534h-.915l-1.509-4.534h-.09v4.534h-.61V1.254h1.109z" fill="#00C9FF"/></svg>
-                <p class="mt-6 text-base text-slate-500 md:mt-0">Copyright © <?= date('Y') ?> Webmardi. All rights reserved.</p>
+
+        <section class="text-white bg-blue">
+            <div class="px-4 py-8 mx-auto md:py-24 max-w-7xl"><div class="md:w-1/2"><h2 class="text-lg font-bold md:text-xl lg:text-2xl">Our amazing sponsors</h2><p class="mt-6">Thanks to our sponsors who help making these events happening and offering you beers.</p></div><div class="mt-6 md:mt-16 grid md:grid-cols-3 gap-6"><a href="https://liip.ch/" target="_blank" rel="noopener" class="flex items-center justify-center h-40 lg:h-60 bg-blue-dark transition-colors md:hover:bg-blue-light"><img src="https://webmardi.ch/vectors/liip.svg" alt="Liip AG" class="w-auto" width="147" height="54"></a><a href="https://hidora.io/" target="_blank" rel="noopener" class="flex items-center justify-center h-40 lg:h-60 bg-blue-dark transition-colors md:hover:bg-blue-light"><img src="https://webmardi.ch/vectors/hidora.svg" alt="Hidora" class="w-auto" width="248" height="58"></a><div class="flex items-center justify-center h-40 lg:h-60 bg-blue-light"><div class="text-center lg:mx-20"><p>Do you wish to support us ?</p><a target="_blank" rel="noopener" href="/pdf/sponsoring_factsheet_2024.pdf" itemprop="url" class="mt-5 text-sm inline-block font-bold transition-colors whitespace-nowrap px-4 py-2 border border-blue md:hover:border-cyan md:hover:bg-cyan focus:bg-cyan bg-blue text-white focus:text-blue-dark md:hover:text-blue">See sponsoring packages</a></div></div></div></div>
+        </section>
+
+        <footer class="px-4 mx-auto py-9 md:pt-24 max-w-7xl">
+            <div class="lg:grid grid-cols-12 gap-6">
+                <div class="col-span-6">
+                    <h2 class="text-lg font-bold md:text-xl lg:text-2xl">Newsletter</h2>
+                    <p class="mt-4 md:mt-7">Sign up to be informed about upcoming events.</p>
+                    <form class="w-full mt-6 sm:flex lg:mt-16 space-y-4 sm:space-y-0">
+                        <label for="email-address" class="sr-only">E-mail</label><input id="email-address" name="email" type="email" autocomplete="email" required="" class="w-full px-4 py-2 mr-5 text-sm md:text-base placeholder-blue border border-blue focus:ring-blue-dark focus:border-blue-dark" placeholder="E-mail" value="">
+                        <div class="flex-shrink-0"><button type="submit" class="inline-block font-bold transition-colors whitespace-nowrap px-4 py-2 border border-blue md:hover:border-cyan md:hover:bg-cyan focus:bg-cyan bg-blue text-white focus:text-blue-dark md:hover:text-blue">Subscribe</button></div>
+                    </form>
+                </div>
+                <div class="flex flex-col mt-12 col-span-5 col-start-8 lg:mt-0">
+                    <h2 class="text-lg font-bold md:text-xl lg:text-2xl">Be a speaker</h2>
+                    <p class="mt-4 md:mt-7">Let your voice be heard at our events and beyond.</p>
+                    <div class="mt-6 lg:mt-auto space-y-4 sm:space-y-0">
+                        <a href="mailto:contact@webmardi.ch" target="_blank" rel="noopener" class="mr-5 xl:px-10 inline-block font-bold transition-colors whitespace-nowrap px-4 py-2 border border-blue md:hover:bg-blue text-blue md:hover:text-white hover:border-white focus:bg-blue-dark focus:text-white bg-white">Contact us</a>
+                        <a href="https://bit.ly/webmardi-talk" target="_blank" rel="noopener" class="inline-block font-bold transition-colors whitespace-nowrap px-4 py-2 border border-cyan md:hover:border-blue md:hover:bg-white bg-cyan text-blue focus:text-blue-dark md:hover:text-blue-lighter">Submit your paper</a>
+                    </div>
+                </div>
             </div>
+            <address class="items-center justify-between mt-12 text-sm not-italic md:flex md:mt-32 link">
+                <p>Webmardi © 2023</p>
+            </address>
         </footer>
 
-            </main><!-- #main -->
-        </div><!-- #primary -->
-    </div><!-- #content -->
+    </div><!-- /content -->
 
 <?php wp_footer(); ?>
 

@@ -14,29 +14,160 @@
     <?php wp_head(); ?>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                colors: {
+                    cyan: '#00C9FF',
+                    blue: {
+                        lighter: '#4040B8',
+                        light: '#3333B4',
+                        DEFAULT: '#2525A5',
+                        dark: '#1E1E85',
+                    },
+                    white: '#fff',
+                },
+                fontFamily: {
+                    sans: [
+                        'Space Grotesk',
+                        'ui-sans-serif',
+                        'system-ui',
+                        '-apple-system',
+                        'BlinkMacSystemFont',
+                        '"Segoe UI"',
+                        'Roboto',
+                        '"Helvetica Neue"',
+                        'Arial',
+                        '"Noto Sans"',
+                        'sans-serif',
+                        '"Apple Color Emoji"',
+                        '"Segoe UI Emoji"',
+                        '"Segoe UI Symbol"',
+                        '"Noto Color Emoji"',
+                    ],
+                },
+                fontSize: {
+                    xs: [
+                        '12px',
+                        { lineHeight: '15px' },
+                    ],
+                    sm: [
+                        '17px',
+                        {
+                            lineHeight: '23px',
+                            letterSpacing: '-0.15px',
+                        },
+                    ],
+                    base: [
+                        '22px',
+                        {
+                            lineHeight: '28px',
+                            letterSpacing: '-0.15px',
+                        },
+                    ],
+                    lg: [
+                        '27px',
+                        {
+                            lineHeight: '35px',
+                            letterSpacing: '-0.21px',
+                        },
+                    ],
+                    xl: [
+                        '37px',
+                        {
+                            lineHeight: '45px',
+                            letterSpacing: '-0.3px',
+                        },
+                    ],
+                    '2xl': [
+                        '65px',
+                        {
+                            lineHeight: '72px',
+                            letterSpacing: '-0.8px',
+                        },
+                    ],
+                },
+                underlineOffset: {
+                    small: '1px',
+                    medium: '3px',
+                },
+                extend: {
+                    animation: {
+                        'bounce': 'bounce 0.5s infinite',
+                    },
+                    keyframes: {
+                        bounce: {
+                            '0%, 100%': { transform: 'translateY(-10%)' },
+                            '50%': { transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            },
+            variants: {
+                underlineColors: ['hover', 'focus', 'active'],
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        .link a {
+        }
+    </style>
+    <style type="text/css">
+        .Icon_default__gEkw6 {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            top: -0.1em;
+            width: 1em;
+            height: 1em;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap');
+    </style>
 </head>
 
-<body <?php body_class(); ?> class="flex min-h-full">
+<body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<div id="content" class="site-content">
-    <div id="primary" class="content-area">
-        <main id="main" class="site-main flex w-full flex-col">
-            <!-- Header menu with logo and CTA for Meetup -->
-            <header class="relative z-50 flex-none lg:pt-11">
-                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center sm:justify-between lg:flex-nowrap">
-                    <div class="mt-10 lg:mt-0 lg:grow lg:basis-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 183 48" class="h-12 w-auto text-slate-900" width="207" height="33" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.624 10.258L8.256 27.56h.537l3.48-17.302h7.766L23.52 27.56h.534l2.635-17.302h5.622L27.94 32.376h-8.034l-3.48-17.303h-.537l-3.48 17.303H4.373L0 10.258h5.624zM49.851 19.043c-.402-2.81-2.188-4.593-5.088-4.593-3.17 0-4.821 1.873-5.267 4.593H49.85zm-5.043-9.41c6.425 0 10.755 4.505 10.755 11.149v2.185H39.452c.223 2.943 2.32 5.217 5.534 5.217 3.124 0 4.775-1.739 5.534-3.3l4.597 2.676C53.599 29.879 51.01 33 45.074 33c-6.605 0-11.38-4.994-11.38-11.861 0-6.689 4.597-11.506 11.114-11.506zM64.666 21.317c0 4.192 2.588 6.689 6.07 6.689 3.392 0 6.07-2.408 6.07-6.689 0-4.28-2.678-6.688-6.07-6.688-3.482 0-6.07 2.497-6.07 6.688zm0-20.156V13.38h.537c1.158-1.873 3.123-3.747 7.05-3.747 5.534 0 10.176 4.906 10.176 11.684 0 6.779-4.642 11.684-10.175 11.684-3.928 0-5.893-1.873-7.052-3.746h-.626v3.122h-5.533V1.16h5.623z" fill="#4040B8"/><path fill-rule="evenodd" clip-rule="evenodd" d="M110.5 32.376l-2.634-17.302h-.535l-3.481 17.302h-7.765l-3.482-17.302h-.536l-2.633 17.302h-5.623l4.374-22.119h8.033l3.48 17.303h.536l3.481-17.303h8.034l4.374 22.12H110.5zM127.629 28.363c3.927 0 6.115-2.32 6.115-5.351v-.357l-6.785.803c-2.098.267-3.124 1.025-3.124 2.318 0 1.516 1.295 2.587 3.794 2.587zm1.786-18.73c6.025 0 9.952 3.434 9.952 8.607v14.136h-5.535v-3.122h-.624c-.715 1.472-2.277 3.747-6.962 3.747-4.999 0-8.302-2.676-8.302-6.912 0-3.523 3.08-5.976 7.321-6.422l8.479-.936v-.535c0-2.096-1.608-3.747-4.642-3.747-2.945 0-4.775 1.517-6.159 3.836l-4.553-2.944c2.634-3.3 5.624-5.707 11.025-5.707zM149.631 13.469h.624c.848-2.453 2.723-3.3 5.535-3.3h2.142v5.083h-3.303c-2.857 0-4.909 1.516-4.909 4.638v12.486h-5.624V10.257h5.535v3.212zM164.402 21.317c0 4.28 2.678 6.689 6.07 6.689 3.481 0 6.07-2.497 6.07-6.689 0-4.191-2.589-6.688-6.07-6.688-3.392 0-6.07 2.407-6.07 6.688zm17.763 11.06h-5.534v-3.122h-.625c-1.161 1.873-3.125 3.746-7.051 3.746-5.536 0-10.177-4.905-10.177-11.684 0-6.778 4.641-11.684 10.177-11.684 3.926 0 5.89 1.874 7.051 3.747h.536V1.16h5.623v31.216zM187.16 32.377h5.624v-22.12h-5.624v22.12zM189.973 0c2.231 0 3.972 1.56 3.972 3.836 0 2.274-1.741 3.834-3.972 3.834-2.232 0-3.972-1.56-3.972-3.834 0-2.275 1.74-3.836 3.972-3.836zM200.951 1.254v.557h-1.741v4.646h-.61V1.81h-1.734v-.557h4.085zM202.776 1.254l1.509 4.549h.09l1.516-4.55H207v5.204h-.61V1.923h-.089l-1.51 4.534h-.915l-1.509-4.534h-.09v4.534h-.61V1.254h1.109z" fill="#00C9FF"/></svg>
-                    </div>
+<div id="content" class="site-content overflow-x-hidden font-sans text-sm antialiased font-medium md:text-base text-blue">
 
-                    <div class="order-first -mx-4 flex flex-auto basis-full overflow-x-auto whitespace-nowrap border-b border-blue-600/10 py-4 font-mono text-sm text-blue-600 sm:-mx-6 lg:order-none lg:mx-0 lg:basis-auto lg:border-0 lg:py-0">
-                        <div class="mx-auto flex items-center gap-4 px-4">
-                            <p>Season 2023</p>
-                            <p>Switzerland</p>
-                        </div>
-                    </div>
+    <!-- SVG collection -->
+    <div style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 19" id="youtube"><path fill="currentColor" fill-rule="evenodd" d="M4.568.194c3.749-.258 12.11-.26 15.864 0C24.496.476 24.97 2.971 25 9.5c-.03 6.54-.508 9.025-4.568 9.306-3.754.26-12.114.258-15.864 0C.504 18.524.03 16.029 0 9.5.03 2.96.508.475 4.568.194zm13.14 9.299L9.375 5.278v8.444l8.333-4.23z" clip-rule="evenodd"></path></svg><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 20" id="twitter"><path fill="currentColor" d="M25 2.368c-.92.402-1.908.672-2.946.794A5.073 5.073 0 0 0 24.31.37c-.99.578-2.088.999-3.257 1.226A5.159 5.159 0 0 0 17.308 0c-3.311 0-5.745 3.041-4.996 6.199A14.638 14.638 0 0 1 1.74.924a5.008 5.008 0 0 0 1.586 6.741 5.169 5.169 0 0 1-2.322-.632c-.056 2.34 1.647 4.528 4.114 5.015a5.22 5.22 0 0 1-2.317.086c.652 2.006 2.546 3.465 4.792 3.506A10.43 10.43 0 0 1 0 17.732 14.687 14.687 0 0 0 7.862 20c9.523 0 14.904-7.917 14.579-15.018A10.353 10.353 0 0 0 25 2.368z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 11 7" id="technical"><path stroke="currentColor" d="M3.364 1.136 1 3.5l2.364 2.364m4 0L9.728 3.5 7.364 1.136"></path></svg><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 9 9" id="special_event"><circle cx="4.5" cy="4.5" r="4" stroke="currentColor"></circle><path stroke="currentColor" d="M6.5 4.5a2 2 0 1 1-4 0"></path></svg><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 9 9" id="for_everyone"><path fill="currentColor" d="M4 0h1v2H4zm0 7h1v2H4zm5-3v1H7V4zM2 4v1H0V4zM7.33.964l.706.707-1.414 1.415-.707-.707zm-4.95 4.95.706.707-1.414 1.414-.707-.707zm5.656 1.415-.707.707-1.415-1.414.707-.707zm-4.95-4.951-.707.708L.964 1.67l.707-.707z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" id="instagram"><path fill="currentColor" fill-rule="evenodd" d="M12.5 0C9.105 0 8.68.015 7.347.075 2.807.283.284 2.802.076 7.345.015 8.68 0 9.106 0 12.5c0 3.395.015 3.82.075 5.154.208 4.54 2.727 7.063 7.27 7.271 1.335.06 1.76.075 5.155.075 3.395 0 3.82-.015 5.154-.075 4.536-.208 7.065-2.727 7.27-7.27.061-1.334.076-1.76.076-5.155 0-3.395-.015-3.82-.075-5.153-.204-4.536-2.726-7.063-7.27-7.271C16.321.015 15.895 0 12.5 0zm0 2.253c3.338 0 3.733.013 5.052.073 3.388.154 4.97 1.762 5.124 5.124.06 1.318.072 1.714.072 5.051 0 3.339-.013 3.733-.072 5.051-.155 3.36-1.733 4.97-5.124 5.124-1.319.06-1.712.073-5.052.073-3.338 0-3.733-.012-5.051-.073-3.396-.155-4.97-1.77-5.124-5.125-.06-1.318-.073-1.712-.073-5.051 0-3.338.014-3.732.073-5.051.155-3.361 1.733-4.97 5.124-5.124 1.319-.06 1.713-.072 5.051-.072zM6.081 12.5a6.419 6.419 0 1 1 12.838 0 6.419 6.419 0 0 1-12.838 0zm6.419 4.167a4.166 4.166 0 1 1 0-8.333 4.166 4.166 0 0 1 0 8.333zm5.172-10.839a1.5 1.5 0 1 1 3.001.001 1.5 1.5 0 0 1-3.001 0z" clip-rule="evenodd"></path></svg><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" id="facebook"><path fill="currentColor" fill-rule="evenodd" d="M0 12.5C0 5.597 5.597 0 12.5 0S25 5.597 25 12.5 19.403 25 12.5 25 0 19.403 0 12.5zm14.219-4.167h1.406V5.208h-2.053c-2.185 0-3.155.962-3.155 2.804v2.405H8.333V12.5h2.084v7.292h3.125V12.5h1.865l.218-2.083h-2.083V9.144c0-.58.116-.81.677-.81z" clip-rule="evenodd"></path></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="linkedin"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 9 9" id="design"><path fill="currentColor" d="M4 0h1v2H4zm0 7h1v2H4zm5-3v1H7V4zM2 4v1H0V4zM7.33.964l.706.707-1.414 1.415-.707-.707zm-4.95 4.95.706.707-1.414 1.414-.707-.707zm5.656 1.415-.707.707-1.415-1.414.707-.707zm-4.95-4.951-.707.708L.964 1.67l.707-.707z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="mastodon"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg></div>
+    <!-- /SVG collection -->
 
-                    <div class="hidden sm:mt-10 sm:flex lg:mt-0 lg:grow lg:basis-0 lg:justify-end">
-                        <a target="_blank" class="inline-flex justify-center rounded-2xl bg-blue-600 p-4 text-base font-semibold text-white hover:bg-blue-500 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:text-white/70" href="https://www.meetup.com/webmardi/">Checkout on Meetup</a>
-                    </div>
-            </header>
+    <header class="text-white bg-blue">
+        <div class="px-4 py-4 mx-auto border-b md:py-10 max-w-7xl border-blue-lighter">
+            <div class="items-center justify-between md:flex space-y-4 md:space-y-0">
+                <a href="/"><img src="https://webmardi.ch/vectors/logo.svg" alt="Webmardi logotype" class="w-1/3 md:w-auto" width="207" height="33"></a>
+                <p class="flex flex-col sm:flex-row sm:items-center">Don’t be shy, follow us
+                    <span class="text-lg sm:pl-8 md:text-xl space-x-4 md:space-x-6">
+                        <a href="https://www.facebook.com/webmardi" target="_blank" rel="noopener" class="inline-block focus:text-cyan transition-colors md:hover:motion-safe:animate-bounce">
+                            <svg class="Icon_default__gEkw6 text-[0.7em]" aria-hidden="true"><use xlink:href="#facebook"></use></svg>
+                            <span class="sr-only">facebook</span>
+                        </a>
+                        <a href="https://www.twitter.com/webmardi" target="_blank" rel="noopener" class="inline-block focus:text-cyan transition-colors md:hover:motion-safe:animate-bounce">
+                            <svg class="Icon_default__gEkw6 text-[0.7em]" aria-hidden="true"><use xlink:href="#twitter"></use></svg>
+                            <span class="sr-only">twitter</span>
+                        </a>
+                        <a href="https://tooting.ch/@webmardi" target="_blank" rel="noopener" class="inline-block focus:text-cyan transition-colors md:hover:motion-safe:animate-bounce">
+                            <svg class="Icon_default__gEkw6 text-[0.7em]" aria-hidden="true"><use xlink:href="#mastodon"></use></svg>
+                            <span class="sr-only">mastodon</span>
+                        </a>
+                        <a href="https://www.youtube.com/webmardi" target="_blank" rel="noopener" class="inline-block focus:text-cyan transition-colors md:hover:motion-safe:animate-bounce">
+                            <svg class="Icon_default__gEkw6 text-[0.7em]" aria-hidden="true"><use xlink:href="#youtube"></use></svg>
+                            <span class="sr-only">youtube</span>
+                        </a>
+                        <a href="https://www.instagram.com/webmardi" target="_blank" rel="noopener" class="inline-block focus:text-cyan transition-colors md:hover:motion-safe:animate-bounce">
+                            <svg class="Icon_default__gEkw6 text-[0.7em]" aria-hidden="true"><use xlink:href="#instagram"></use></svg>
+                            <span class="sr-only">instagram</span>
+                        </a>
+                        <a href="https://www.linkedin.com/company/webmardi" target="_blank" rel="noopener" class="inline-block focus:text-cyan transition-colors md:hover:motion-safe:animate-bounce">
+                            <svg class="Icon_default__gEkw6 text-[0.7em]" aria-hidden="true"><use xlink:href="#linkedin"></use></svg>
+                            <span class="sr-only">linkedin</span>
+                        </a>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </header>
