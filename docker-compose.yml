@@ -16,7 +16,9 @@ services:
 
   # The Web Server.
   wordpress:
-    image: 'wordpress:latest'
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
     depends_on:
       - db
     ports:
