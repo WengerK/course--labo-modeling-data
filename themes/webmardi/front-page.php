@@ -90,6 +90,8 @@
                 </li>
             <?php endforeach; ?>
         </ul>
+
+        <a class="mt-8 inline-block font-bold transition-colors whitespace-nowrap px-4 py-2 border border-blue md:hover:bg-blue text-blue md:hover:text-white hover:border-white focus:bg-blue-dark focus:text-white bg-white" href="<?php echo get_post_type_archive_link('event') ?>">View more</a>
     </section>
 </main>
 
