@@ -23,7 +23,10 @@ function get_webmardi_event_2023() {
  */
 add_action( 'pre_get_posts', function($query){
   if(is_archive() && is_post_type_archive( 'event' )):
+    // Order by ACF field must use meta_key & orderby.
+    // @see https://www.advancedcustomfields.com/resources/order-posts-by-custom-fields/
     $query->set( 'order', 'ASC' );
-    $query->set( 'orderby', 'event_when' );
+    $query->set( 'meta_key', 'event_when' );
+    $query->set( 'orderby', 'meta_value' );
   endif;
 });

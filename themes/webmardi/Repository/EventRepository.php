@@ -15,7 +15,10 @@ class EventRepository {
       'posts_per_page' => 1,
       'post_type' => 'event',
       'post_status' => 'publish',
-      'orderby' => 'event_when',
+      // Order by ACF field must use meta_key & orderby.
+      // @see https://www.advancedcustomfields.com/resources/order-posts-by-custom-fields/
+      'meta_key' => 'event_when',
+      'orderby' => 'meta_value',
       'order' => 'ASC',
       'meta_query' => [
         'relation' => 'AND',
@@ -44,8 +47,11 @@ class EventRepository {
       'posts_per_page' => 12,
       'post_type' => 'event',
       'post_status' => 'publish',
-      'orderby' => 'event_when',
-      'order' => 'DESC',
+      // Order by ACF field must use meta_key & orderby.
+      // @see https://www.advancedcustomfields.com/resources/order-posts-by-custom-fields/
+      'meta_key' => 'event_when',
+      'orderby' => 'meta_value',
+      'order' => 'ASC',
       'meta_query' => [
         'relation' => 'AND',
         [
